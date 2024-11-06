@@ -15,8 +15,8 @@ import Hero from "../containers/Hero";
 export default function Home() {
   return (
     <>
-      <h1 className="uppercase text-blue-500">Chabbhikar</h1>
-      <h2 className="text-red-500">Hello</h2>
+      <h1 className="">Chabbhikar</h1>
+      <h2 className="">Hello</h2>
       <Hero />
       {/* <Carousel items={items}/> */}
     </>

@@ -3,7 +3,7 @@ import heroOne from "../assets/heroOne.png";
 
 const Hero = () => {
   return (
-    <div className="">
+    <div className="w-full">
       <Image src={heroOne} alt="" />
     </div>
   );
