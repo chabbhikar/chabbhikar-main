@@ -3,6 +3,7 @@
 // import styles from "./page.module.css";
 
 import Hero from "../containers/Hero";
+import { Button } from "@chakra-ui/react";
 
 // import Carousel from "./components/carousel";
 
@@ -17,6 +18,7 @@ export default function Home() {
     <>
       <h1 className="">Chabbhikar</h1>
       <h2 className="">Hello</h2>
+      <Button>Click me</Button>
       <Hero />
       {/* <Carousel items={items}/> */}
     </>

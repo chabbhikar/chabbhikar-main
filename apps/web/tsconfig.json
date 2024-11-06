@@ -1,6 +1,12 @@
 {
   "extends": "@repo/typescript-config/nextjs.json",
   "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "skipLibCheck": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "plugins": [
       {
         "name": "next"
@@ -12,7 +18,8 @@
     "next.config.mjs",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
-, "tailwind.config.ts"  ],
+    ".next/types/**/*.ts",
+    "tailwind.config.ts"
+  ],
   "exclude": ["node_modules"]
 }
