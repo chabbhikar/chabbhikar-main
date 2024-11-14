@@ -12,6 +12,7 @@ import Provider from "../provider";
 //   variable: "--font-geist-mono",
 // });
 
+
 export const metadata: Metadata = {
   title: "Chabbhikar",
   description: "Chabbhikar Platform",

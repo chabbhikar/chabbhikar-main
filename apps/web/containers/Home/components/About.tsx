@@ -3,8 +3,8 @@ import { data } from "../data";
 
 const About = () => {
   return (
-    <Container bgColor="white">
-      <Flex>
+    <Container bgColor="white" color="black" w="max">
+      <Flex justifyContent="space-between">
         <Box>
           <Text>{data.aboutSection.heading}</Text>
         </Box>
