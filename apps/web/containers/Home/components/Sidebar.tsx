@@ -1,5 +1,6 @@
 "use client"
-import { Drawer, DrawerBody, DrawerOverlay, DrawerContent, useDisclosure, Button, Box, VStack, Heading, Text } from "@chakra-ui/react";
+
+import { Drawer, DrawerBody, DrawerContent, useDisclosure, Button, Box, VStack, Heading, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Icon } from "@iconify/react";
@@ -11,11 +12,11 @@ export default function Sidebar() {
     const [toggle, setToggle] = useState({ main: true, login: false });
 
     const renderMain = (
-        <VStack spacing={6} className={styles.sidebarContainer}>
+        <VStack className={styles.sidebarContainer}>
             <Heading as="h2" className={styles.title}>MENU</Heading>
             <Box className={styles.mainContent}>
                 <NavLink className={styles.menuItem} to='/quote'>GET A QUOTE IN 30 MINUTES</NavLink>
-                <Button variant="link" className={styles.menuItem}>CONTACT US NOW</Button>
+                <Button variant="solid" className={styles.menuItem}>CONTACT US NOW</Button>
             </Box>
             <Text className={styles.loginLink} onClick={() => setToggle((prev) => ({ ...prev, login: true }))}>
                 MEMBERS LOGIN
@@ -38,7 +39,8 @@ export default function Sidebar() {
                         {toggle.login ? (
                             <Box display="grid" gridTemplateColumns="1fr 1fr">
                                 <Box bg="white" color="black" w="20rem" p={3} display="flex" flexDirection="column" justifyContent="center">
-                                    <SignInForm />
+                                    {/* <SignInForm /> */}
+                                    <h1>Hello</h1>
                                 </Box>
                                 {renderMain}
                             </Box>
