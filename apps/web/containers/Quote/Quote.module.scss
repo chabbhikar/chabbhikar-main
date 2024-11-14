@@ -1,0 +1,36 @@
+/* Quote.module.scss */
+
+.container {
+    min-height: 100vh;
+    padding-top: 2.5rem;
+    padding: 0 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    color: white;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-top: 2.5rem;
+}
+
+.stepContainer {
+    .stepNumber {
+        border: 1px solid;
+        padding: 0.5rem;
+        border-radius: 1rem;
+    }
+}
+
+.tabContent {
+    color: gray;
+
+    .price {
+        text-align: right;
+    }
+
+    .description {
+        text-transform: lowercase;
+        font-size: 0.875rem;
+    }
+}
