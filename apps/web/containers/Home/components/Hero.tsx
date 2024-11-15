@@ -1,5 +1,6 @@
 import { Box, Container, Flex, Text, VStack } from "@chakra-ui/react";
 import { data } from "../data";
+import { ColorModeButton } from "../../../components/ui/color-mode";
 
 const Hero = () => {
   return (
@@ -50,6 +51,7 @@ const Hero = () => {
             </Text>
           </VStack>
         </Box>
+        <ColorModeButton />
       </Flex>
     </Container>
   );
