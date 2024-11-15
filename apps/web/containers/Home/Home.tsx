@@ -1,4 +1,4 @@
-import About from "./components/About";
+import About from "./components/about/About";
 import Hero from "./components/Hero";
 
 const Home = () => {

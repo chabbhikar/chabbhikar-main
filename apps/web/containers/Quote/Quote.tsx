@@ -1,6 +1,6 @@
 import { useMemo } from "react";
-import { Tabs, TabsList, TabPanels, Box, VStack, Heading, Text, Image, Button } from "@chakra-ui/react";
-import { Icon } from "@iconify/react";
+import { Box, VStack, Heading, Text } from "@chakra-ui/react";
+// import { Icon } from "@iconify/react";
 import Sidebar from "../Home/components/Sidebar";
 import styles from "./Quote.module.scss";
 import g1 from "../../public/assets/photos/kitchen/g1.png";
@@ -50,7 +50,7 @@ export default function Quote() {
   return (
     <Box className="bg-[#434343]" backgroundImage={backgroundImage} backgroundPosition="center" backgroundSize="cover" minH="100vh">
       <Box className={`${styles.container}`}>
-        <VStack spacing={4}>
+        <VStack>
           <Heading className={styles.title}>MAGPPIE</Heading>
           <Text fontSize="2xl" color="white" fontWeight="bold">Get a Quote in 3 easy steps</Text>
           {renderCards}
@@ -58,29 +58,14 @@ export default function Quote() {
         {renderFooter}
       </Box>
 
-      <Box textColor="white" textAlign="center" textTransform="uppercase" p={4}>
-        <VStack spacing={2} className={styles.stepContainer}>
+      <Box textAlign="center" textTransform="uppercase" p={4}>
+        <VStack className={styles.stepContainer}>
           <Box className="flex gap-2 align-middle justify-center">
             <Text>Step</Text>
             <Box className="border px-2 rounded-2xl">1</Box>
           </Box>
           <Text fontSize="3xl">CHOOSE YOUR <span className="font-bold">KITCHEN Style</span></Text>
         </VStack>
-
-        <Tabs variant="enclosed" colorScheme="whiteAlpha">
-          <TabsList justifyContent="center">
-            <Tab>ALL (8)</Tab>
-            <Tab>PREMIUM (7)</Tab>
-            <Tab>LUKE (5)</Tab>
-            <Tab>PLATINUMM (3)</Tab>
-          </TabsList>
-          <TabsPanels>
-            <Tabs>Content of Tab 1</Tabs>
-            <Tabs>Content of Tab 2</Tabs>
-            <Tabs>Content of Tab 3</Tabs>
-            <Tabs>Content of Tab 4</Tabs>
-          </TabsPanels>
-        </Tabs>
       </Box>
     </Box>
   );

@@ -1,14 +1,15 @@
 import { Box, Container, Flex, Text } from "@chakra-ui/react";
-import { data } from "../data";
+import { data } from "../../data";
+import styles from "./about.module.scss"
 
 const About = () => {
   return (
-    <Container bgColor="white" color="black" w="max">
-      <Flex justifyContent="space-between">
-        <Box>
+    <Container className={styles.aboutContainer}>
+      <Flex>
+        <Box width="">
           <Text>{data.aboutSection.heading}</Text>
         </Box>
-        <Box>
+        <Box width="">
           <Text>{data.aboutSection.description}</Text>
         </Box>
       </Flex>
