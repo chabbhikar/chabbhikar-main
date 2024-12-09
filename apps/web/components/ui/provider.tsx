@@ -1,24 +1,31 @@
-"use client"
+"use client";
 
-import { ChakraProvider, defaultSystem } from "@chakra-ui/react"
-import {
-  ColorModeProvider,
-  type ColorModeProviderProps,
-} from "./color-mode"
+import { ChakraProvider, extendTheme, ColorModeScript } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
-export function Provider(props: ColorModeProviderProps) {
+// Define the theme with color mode configurations
+const theme = extendTheme({
+  config: {
+    initialColorMode: "light", // Set the initial color mode
+    useSystemColorMode: false, // Disable syncing with system preference
+  },
+});
+
+export function Provider({ children }: { children: React.ReactNode }) {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
+  // Avoid rendering until the component is mounted
   if (!isMounted) return null;
-  
+
   return (
-    <ChakraProvider value={defaultSystem}>
-      <ColorModeProvider {...props} />
+    <ChakraProvider theme={theme}>
+      {/* Ensure color mode script is included */}
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+      {children}
     </ChakraProvider>
-  )
+  );
 }

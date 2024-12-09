@@ -5,14 +5,14 @@ import React from "react";
 interface Props extends ChakraProps {
   className?: string;
   titleText?: React.ReactNode;
-  wellnessImage?: string;
+  profileImage?: string;
 }
 
-export default function WellnessKitchenProfile({
+const WellnessKitchenProfile = ({
   titleText = "WELLNESS KITCHENS",
-  wellnessImage = "images/img_photo_2024_02_01_578x334.png",
+  profileImage = "images/img_photo_2024_02_01_578x334.png",
   ...props
-}: Props) {
+}: Props) => {
   return (
     <Flex
       {...props}
@@ -21,17 +21,12 @@ export default function WellnessKitchenProfile({
       flexDirection="column"
       alignItems="center"
     >
-      <Heading
-        size="heading2x1"
-        as="h5"
-        letterSpacing="-0.40px"
-        fontFamily="Montserrat"
-      >
+      <Heading as="h5" letterSpacing="-0.40px">
         {titleText}
       </Heading>
       <Image
-        src={wellnessImage}
-        alt="Wellness"
+        src={profileImage}
+        alt="Feature Image"
         h="578px"
         w="100%"
         fit="cover"
@@ -39,4 +34,6 @@ export default function WellnessKitchenProfile({
       />
     </Flex>
   );
-}
+};
+
+export default WellnessKitchenProfile;
