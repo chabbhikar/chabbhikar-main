@@ -247,6 +247,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@chakra-ui/next-js@npm:2.4.2":
+  version: 2.4.2
+  resolution: "@chakra-ui/next-js@npm:2.4.2"
+  dependencies:
+    "@emotion/cache": "npm:^11.11.0"
+  peerDependencies:
+    "@chakra-ui/react": ">=2.4.0"
+    "@emotion/react": ">=11"
+    next: ">=13"
+    react: ">=18"
+  checksum: 10c0/86bb4aa43500635dd8350c40ad5250e41c190be42ddff72cc6fcd061eb69eb15c5337ae55be80b7522f4d99e549e9b793ea5a7bbafc1276f4a046024fea0b2f8
+  languageName: node
+  linkType: hard
+
 "@chakra-ui/react@npm:2.10.4":
   version: 2.10.4
   resolution: "@chakra-ui/react@npm:2.10.4"
@@ -353,6 +367,19 @@ __metadata:
     source-map: "npm:^0.5.7"
     stylis: "npm:4.2.0"
   checksum: 10c0/8ccbfec7defd0e513cb8a1568fa179eac1e20c35fda18aed767f6c59ea7314363ebf2de3e9d2df66c8ad78928dc3dceeded84e6fa8059087cae5c280090aeeeb
+  languageName: node
+  linkType: hard
+
+"@emotion/cache@npm:^11.11.0":
+  version: 11.14.0
+  resolution: "@emotion/cache@npm:11.14.0"
+  dependencies:
+    "@emotion/memoize": "npm:^0.9.0"
+    "@emotion/sheet": "npm:^1.4.0"
+    "@emotion/utils": "npm:^1.4.2"
+    "@emotion/weak-memoize": "npm:^0.4.0"
+    stylis: "npm:4.2.0"
+  checksum: 10c0/3fa3e7a431ab6f8a47c67132a00ac8358f428c1b6c8421d4b20de9df7c18e95eec04a5a6ff5a68908f98d3280044f247b4965ac63df8302d2c94dba718769724
   languageName: node
   linkType: hard
 
@@ -7753,6 +7780,7 @@ __metadata:
   resolution: "web@workspace:apps/web"
   dependencies:
     "@chakra-ui/icons": "npm:^2.2.4"
+    "@chakra-ui/next-js": "npm:2.4.2"
     "@chakra-ui/react": "npm:2.10.4"
     "@emotion/react": "npm:^11.13.5"
     "@emotion/styled": "npm:^11.13.5"
