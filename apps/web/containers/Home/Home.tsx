@@ -105,8 +105,8 @@ const Home = () => {
                   setSliderState(e?.item);
                 }}
                 ref={sliderRef}
-                items={[...Array(3)].map(() => (
-                  <Fragment key={Math.random()}>
+                items={[...Array(3)].map((_, i) => (
+                  <Fragment key={i}>
                     <Image
                       src="images/img_photo_2024_02_01.png"
                       alt="Slider Image"
@@ -122,7 +122,7 @@ const Home = () => {
         </Box>
         <Box>
           {[...Array(3)].map((_, i) => (
-            <>
+            <Fragment key={i}>
               {sliderState >=
                 i * (sliderRef?.current?.state?.itemsInSlide || 1) &&
               sliderState <
@@ -153,7 +153,7 @@ const Home = () => {
                   }}
                 />
               )}
-            </>
+            </Fragment>
           ))}
         </Box>
         <WellnessSectionOne />
