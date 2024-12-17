@@ -2,7 +2,7 @@ import { Box, Text, Heading, VStack } from "@chakra-ui/react";
 import heroTwo from "../../../assets/heroTwo.png";
 import Image from "next/image";
 
-export default function Hero() {
+const Hero = () => {
   return (
     <Box
       display="flex"
@@ -66,4 +66,6 @@ export default function Hero() {
       </Box>
     </Box>
   );
-}
+};
+
+export default Hero;
