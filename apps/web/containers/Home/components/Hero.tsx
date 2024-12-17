@@ -13,18 +13,36 @@ export default function Hero() {
       {/* Text Section */}
       <VStack
         // spacing={4}
-        align="start"
-        p={{ base: 4, md: 8 }}
-        w={{ base: "100%", md: "40%" }}
+        align="center"
+        p={{ base: 4, md: 6 }}
+        w={{ base: "100%", md: "15%" }}
         bg="white"
+        pos="fixed"
+        zIndex={8}
+        left={100}
+        borderBottomLeftRadius={4}
+        borderBottomRightRadius={4}
       >
-        <Heading as="h1" size="lg" fontWeight="bold">
+        <Heading as="h1" size="5xl" textAlign="center" fontWeight="bold">
           MAGPPIE
         </Heading>
-        <Heading as="h2" size="xl">
+      </VStack>
+      <VStack
+        // spacing={4}
+        align="start"
+        p={{ base: 4, md: 8 }}
+        w={{ base: "100%", md: "30%" }}
+        bg="white"
+        pos="absolute"
+        zIndex={4}
+        top="32"
+        left={100}
+        borderRadius={4}
+      >
+        <Heading as="h2" size="3xl" fontWeight="bold">
           Wellness Architecture
         </Heading>
-        <Text fontSize="lg">
+        <Text fontSize="2xl">
           Prioritizing{" "}
           <Text as="span" fontWeight="bold">
             health & sustainability
@@ -34,7 +52,11 @@ export default function Hero() {
         </Text>
       </VStack>
       {/* Image Section */}
-      <Box w={{ base: "100%", md: "60%" }} position="relative" height="100%">
+      <Box
+        w={{ base: "100%", md: "100%", lg: "100%" }}
+        position="relative"
+        height="100%"
+      >
         <Image
           src={heroTwo}
           alt="Architecture"
