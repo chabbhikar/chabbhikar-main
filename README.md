@@ -1,36 +1,24 @@
-# Turborepo starter
+# How to setup Chabbhikar on local
 
-This is an official starter Turborepo.
+1. clone this repo on local ```git clone https://github.com/chabbhikar/chabbhikar-main.git```
+2. run ```corepack enable``` on terminal this will make yarn version latest and enable some other standard dev procedures
+3. run ```yarn install``` this will setup the yarn version specified in package.json and install/link dependencies.
+4. run ```yarn run dev``` or ```yarn turbo run dev```
+   1. this will run all the web packages
+5. to run specific web package in which we are working ```yarn workspace web dev```
 
-## Using this example
 
-Run the following command:
 
-```sh
-npx create-turbo@latest
-```
+## yarn versions
+| Version | Release Date   | Latest Patch | Stability Status        | Notes                                                                                   |
+|---------|----------------|--------------|-------------------------|-----------------------------------------------------------------------------------------|
+| 4       | October 2023   | 4.5.3        | Active Support          | Latest major release with active security and feature updates.                          |
+| 3       | July 2021      | 3.8.7        | Active Support          | Stable release with ongoing support; users are encouraged to upgrade to version 4.      |
+| 2       | July 2020      | 2.4.3        | Ended Support (Sep 2021)| No longer supported; users should upgrade to a supported version.                       |
+| 1       | September 2017 | 1.22.22      | Maintenance Mode        | Receives only critical and security fixes; upgrading to a newer version is recommended. |
 
-## What's inside?
 
-This Turborepo includes the following packages/apps:
 
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
 
 ### Build
 
