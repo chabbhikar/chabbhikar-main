@@ -37,7 +37,6 @@ export async function Quotation() {
 
     const renderScrollIndicator = (<Box >
         <HStack>
-
             <IconButton background='transparent' border='1px solid white' rounded='full' size='sm'>
                 <LuArrowDown />
             </IconButton>
