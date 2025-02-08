@@ -1,4 +1,6 @@
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import Home from "../../../app/ar/page";
+import { HOME } from "../../../constants/mocks";
 
 const About = () => {
   return (
@@ -20,23 +22,14 @@ const About = () => {
           lineHeight="shorter"
           color="gray.700"
         >
-          for people and
-          <br />
-          planet
+          {HOME.TAGS[1]?.heading}
         </Heading>
       </Box>
 
       {/* Paragraph Section */}
       <Box flex="2" pl={{ base: 0, md: 8 }} color="gray.600">
         <Text fontSize={{ base: "md", md: "lg" }}>
-          Redefining the boundaries of architectural design, our engineered
-          porcelain surfaces offer a fusion of beauty, durability, and wellness.
-          Ideal for a broad spectrum of applications—facades, floors, walls, and
-          furniture in residential, commercial, and public spaces—these
-          solutions embody the future of sustainable living environments.
-          Embrace a world where every surface enhances wellness, with our
-          state-of-the-art materials and wellness kitchens, where innovative
-          design meets health.
+          {HOME.TAGS[1]?.description}
         </Text>
       </Box>
     </Flex>

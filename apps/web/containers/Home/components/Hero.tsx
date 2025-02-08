@@ -1,6 +1,7 @@
 import { Box, Text, Heading, VStack } from "@chakra-ui/react";
 import heroTwo from "../../../assets/heroTwo.png";
 import Image from "next/image";
+import { MOCKS, HOME } from "../../../constants/mocks";
 
 const Hero = () => {
   return (
@@ -23,8 +24,8 @@ const Hero = () => {
         borderBottomLeftRadius={4}
         borderBottomRightRadius={4}
       >
-        <Heading as="h1" size="5xl" textAlign="center" fontWeight="bold">
-          MAGPPIE
+        <Heading as="h1" size="4xl" textAlign="center" fontWeight="bold">
+          {MOCKS.APP_NAME}
         </Heading>
       </VStack>
       <VStack
@@ -40,16 +41,9 @@ const Hero = () => {
         borderRadius={4}
       >
         <Heading as="h2" size="3xl" fontWeight="bold">
-          Wellness Architecture
+          {HOME.TAGS[0]?.heading}
         </Heading>
-        <Text fontSize="2xl">
-          Prioritizing{" "}
-          <Text as="span" fontWeight="bold">
-            health & sustainability
-          </Text>{" "}
-          with our wellness surfaces and wellness kitchens for modern living
-          spaces.
-        </Text>
+        <Text fontSize="2xl">{HOME.TAGS[0]?.description}</Text>
       </VStack>
       {/* Image Section */}
       <Box
